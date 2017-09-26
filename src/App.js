@@ -9,11 +9,13 @@ import { connect } from 'react-redux';
 class App extends Component {
   render() {
     return (
+      <div className='container'>
+      <HeaderContainer name={this.props.data.name}/>
       <div className='App'>
-        <HeaderContainer name={this.props.data.name}/>
         <BodyContainer changeName={this.props.changeName}
           name={this.props.data.name}/>
-        <FooterContainer name={this.props.data.name}/>
+      </div>
+      <FooterContainer name={this.props.data.name}/>
       </div>
     );
   }
